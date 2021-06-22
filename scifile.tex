@@ -1,0 +1,188 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+
+\documentclass[12pt]{article}
+
+% Users of the {thebibliography} environment or BibTeX should use the
+% scicite.sty package, downloadable from *Science* at
+% www.sciencemag.org/about/authors/prep/TeX_help/ .
+% This package should properly format in-text
+% reference calls and reference-list numbers.
+
+\usepackage{scicite}
+
+% Use times if you have the font installed; otherwise, comment out the
+% following line.
+
+\usepackage{times}
+
+% The preamble here sets up a lot of new/revised commands and
+% environments.  It's annoying, but please do *not* try to strip these
+% out into a separate .sty file (which could lead to the loss of some
+% information when we convert the file to other formats).  Instead, keep
+% them in the preamble of your main LaTeX source file.
+
+
+% The following parameters seem to provide a reasonable page setup.
+
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+
+
+%The next command sets up an environment for the abstract to your paper.
+
+\newenvironment{sciabstract}{%
+\begin{quote} \bf}
+{\end{quote}}
+
+
+% If your reference list includes text notes as well as references,
+% include the following line; otherwise, comment it out.
+
+\renewcommand\refname{References and Notes}
+
+% The following lines set up an environment for the last note in the
+% reference list, which commonly includes acknowledgments of funding,
+% help, etc.  It's intended for users of BibTeX or the {thebibliography}
+% environment.  Users who are hand-coding their references at the end
+% using a list environment such as {enumerate} can simply add another
+% item at the end, and it will be numbered automatically.
+
+\newcounter{lastnote}
+\newenvironment{scilastnote}{%
+\setcounter{lastnote}{\value{enumiv}}%
+\addtocounter{lastnote}{+1}%
+\begin{list}%
+{\arabic{lastnote}.}
+{\setlength{\leftmargin}{.22in}}
+{\setlength{\labelsep}{.5em}}}
+{\end{list}}
+
+
+% Include your paper's title here
+
+\title{Pollen-sized Pills Could Help Protect Bees from Pesticides } 
+
+
+% Place the author information here.  Please hand-code the contact
+% information and notecalls; do *not* use \footnote commands.  Let the
+% author contact information appear immediately below the author names
+% as shown.  We would also prefer that you don't change the type-size
+% settings shown here.
+
+\author
+{Huong Nguyen\\   \\ ENST 100
+}
+
+% Include the date command, but leave its argument blank.
+
+\date{June 21, 2021}
+
+
+
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+
+\begin{document} 
+
+% Double-space the manuscript.
+
+\baselineskip24pt
+
+% Make the title.
+
+\maketitle 
+
+
+
+% Place your abstract within the special {sciabstract} environment.
+
+
+
+
+
+% In setting up this template for *Science* papers, we've used both
+% the \section* command and the \paragraph* command for topical
+% divisions.  Which you use will of course depend on the type of paper
+% you're writing.  Review Articles tend to have displayed headings, for
+% which \section* is more appropriate; Research Articles, when they have
+% formal topical divisions at all, tend to signal them with bold text
+% that runs into the paragraph, for which \paragraph* is the right
+% choice.  Either way, use the asterisk (*) modifier, as shown, to
+% suppress numbering.
+
+\section*
+
+The article is an informational piece regarding the scientific research of a pill that aims to protect bees from organophosphate and raise concerns about Colony Collapse Order on {\it ABC News\/} \cite{pollen}, considered to have a neutral bias. The author, Karen Kwon, is an environmentalist with a special interest in “intersecting science and society” and wrote several articles with positive connotations concerning the health of bee colonies and biodiversity. Because she has over eight years of background in chemistry and working as a science journalist, her reporting includes several pieces of evidence and data to support her analysis. The source data is provided by {\it Nature Food\/} \cite{nature}, documenting the relationships between pore size distribution, enzyme activity, and survival data in supporting this low-cost detoxification model using microparticles for organophosphate insecticides. 
+
+\section*
+
+The article further mentions clear-cut, concise analysis based on the experiment provided with the data. When bumblebees were given a high dose of a form of organophosphate, the researchers found that 70 percent of those with the OPT pills survived after 12 hours, contrasting to the 37.5 percent of those given OPT alone and 27.5 percent of those with nothing. The company, Beemunity, has also been featured on {\it Cornell Chronicles\/}, {\it CTV News\/}, and {\it Fast Company\/}.
+
+\section*
+
+The article contains several undated graphics, with pictures of bumblebees to illustrate the importance of the creature in the role of supporting agriculture. The call-to-action hero landing video page contains several facts that can be found on the company’s website, such as how 25\%\ bumblebees are facing extinction. Instead of focusing on promoting the vaccine-like microparticle that can detoxify chemicals in pesticides like the article, the video reminds readers to take grassroots actions, such as planting more native plants. The video featured on {\it ABC News\/} is a repost from The Xerces Society for Invertebrate Conservation\cite{blog}, a nonprofit that has a reputation for being a left-winged source, with blogs and social media posts featuring conservative ideology on economic issues that could potentially harm the environment. 
+Besides the video, the article also features opinions from the company’s founder, Webb, and a technology enthusiast named Johnson. The technology enthusiast, Johnson, demonstrates enthusiasm about the potential of the technology, citing that it is "really innovative." Overall, he seems to have a positively biased viewpoint, with the only concern being the effect of organophosphates on human health. Both Webb and Johnson focus heavily on the company’s expansion, with plans to commercialize the idea and test it on different types of bees. While there is unclear evidence on whether the product is tested to work on all types of pesticides, the article exudes a lot of enthusiasm and assertiveness on the product’s effectiveness in experimenting with different types of bees, as well as the potential growth of the company. 
+
+
+\clearpage
+
+\begin{thebibliography}{9}
+
+\bibitem{nature} 
+Chen, J., Webb, J., Shariati, K. \textit{et al}
+ Pollen-inspired enzymatic microparticles to reduce organophosphate toxicity in managed pollinators. \textit{Nat Food} 2, 339–347 (2021).
+
+\bibitem{pollen} 
+Kwon, Karen. "Pollen-sized pills could help protect bees from pesticides".\textit{ ABC News}, June 2021. Web. June 21, 2021
+\\\texttt{https://abcnews.go.com/Technology/pollen-sized-pills
+-protect-bees-pesticides/story?id=78375629/}
+
+\bibitem{blog} 
+"The Xerces Blog."\textit{ Xerces Society,} 2006-2021. Web. June 20, 2021
+\\\texttt{https://www.xerces.org/blog}
+\end{thebibliography}
+
+
+
+
+% For your review copy (i.e., the file you initially send in for
+% evaluation), you can use the {figure} environment and the
+% \includegraphics command to stream your figures into the text, placing
+% all figures at the end.  For the final, revised manuscript for
+% acceptance and production, however, PostScript or other graphics
+% should not be streamed into your compliled file.  Instead, set
+% captions as simple paragraphs (with a \noindent tag), setting them
+% off from the rest of the text with a \clearpage as shown  below, and
+% submit figures as separate files according to the Art Department's
+% instructions.
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
